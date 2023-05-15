@@ -1,0 +1,26 @@
+{
+  "name": "rf-learning-modules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Box-Bop/rf-learning-modules.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Box-Bop/rf-learning-modules/issues"
+  },
+  "homepage": "https://github.com/Box-Bop/rf-learning-modules#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "knex": "^2.4.2",
+    "pg": "^8.10.0"
+  }
+}
