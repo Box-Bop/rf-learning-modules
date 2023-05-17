@@ -5,6 +5,7 @@ async function up(knex) {
 		table.integer('difficulty').notNullable();
 		table.string('type');
 		table.string('description');
+		table.integer('length');
 		table.timestamps(true, true);
 	});
 
