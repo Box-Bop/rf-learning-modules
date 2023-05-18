@@ -8,15 +8,6 @@ async function up(knex) {
 		table.integer('length');
 		table.timestamps(true, true);
 	});
-
-	return await knex('modules').insert([
-		{
-			name: "How to use BurpSuite", difficulty: 1,
-		},
-		{
-			name: "How to use WireShark", difficulty: 2,
-		}
-	]);
 }
 
 async function down(knex) {

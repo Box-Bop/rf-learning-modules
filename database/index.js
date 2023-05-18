@@ -1,9 +1,10 @@
 const { knex } = require('knex');
 const path = require('path');
+const sampleData = require('./sample-data');
 
 const sleep = ms => new Promise(r => setTimeout(r, ms)); // TODO: take this to a utils file
 
-module.exports = async function createConnection() {
+async function createConnection() {
 	await sleep(4000);
 	const connection = await knex({
 		client: 'pg',
@@ -26,4 +27,28 @@ module.exports = async function createConnection() {
 	console.log('Database connection initialised');
 
 	return connection;
+}
+
+async function insertSampleData(knex) {
+	try {
+		await knex.transaction(async (trx) => {
+			for (const [key, value] of Object.entries(sampleData)) {
+				await trx(key)
+					.insert(value)
+					.onConflict('id')
+					.ignore();
+			}
+
+			console.log('Sample data inserted successfully');
+		});
+	} catch (error) {
+		console.error('Error inserting sample data:', error);
+	} finally {
+		knex.destroy();
+	}
+}
+
+module.exports = {
+	createConnection,
+	insertSampleData
 }

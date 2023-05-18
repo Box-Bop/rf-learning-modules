@@ -1,9 +1,11 @@
-const createConnection = require("./database");
+const database = require("./database");
 const express = require('express');
 // import { registerRoutes } from './router';
 
 async function initialize() {
-	await createConnection();
+	const db = await database.createConnection();
+
+	database.insertSampleData(db);
 
 	const app = express();
 	// registerRoutes(app);
