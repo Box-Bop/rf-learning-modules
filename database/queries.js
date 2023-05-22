@@ -10,7 +10,7 @@ async function insertSampleData() {
 				await trx(key)
 					.insert(value)
 					.onConflict('id')
-					.ignore();
+					.merge();
 			}
 
 			console.log('Sample data inserted successfully');
@@ -26,10 +26,9 @@ async function getModulesByCategoryName(categoryName) {
 		const modules = await db('modules')
 			.select('modules.*')
 			.join('course_modules', 'modules.id', '=', 'course_modules.module_id')
-			.join('courses', 'course_modules.course_id', '=', 'courses.id')
-			.join('category_courses', 'courses.id', '=', 'category_courses.course_id')
+			.join('category_courses', 'course_modules.course_id', '=', 'category_courses.course_id')
 			.join('categories', 'category_courses.category_id', '=', 'categories.id')
-			.where('categories.name', categoryName);
+			.whereRaw('LOWER(categories.name) LIKE ?', `%${categoryName.toLowerCase()}%`);
 
 		console.log(modules);
 		return modules;
