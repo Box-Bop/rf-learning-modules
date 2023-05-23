@@ -5,11 +5,11 @@ async function up(knex) {
 		table.integer('category_id').unsigned().notNullable();
 		table
 			.foreign('course_id')
-			.references('courses.id')
+			.references('courses.id');
 		table
 			.foreign('category_id')
-			.references('categories.id')
-		table.unique(['course_id', 'category_id'])
+			.references('categories.id');
+		table.unique(['course_id', 'category_id']);
 		table.timestamps(true, true);
 	});
 }

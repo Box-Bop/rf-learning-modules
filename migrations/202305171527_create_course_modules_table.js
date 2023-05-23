@@ -5,11 +5,12 @@ async function up(knex) {
 		table.integer('module_id').unsigned().notNullable();
 		table
 			.foreign('course_id')
-			.references('courses.id')
+			.references('courses.id');
 		table
 			.foreign('module_id')
-			.references('modules.id')
-		table.unique(['course_id', 'module_id'])
+			.references('modules.id');
+		table.unique(['course_id', 'module_id']);
+		table.integer('order'); // order at which the module appears on the course, 0 being the top
 		table.timestamps(true, true);
 	});
 }

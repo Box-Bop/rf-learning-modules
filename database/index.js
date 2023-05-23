@@ -7,7 +7,7 @@ let connection = null;
 
 async function dbConnection() {
 	if (!connection) {
-		await sleep(4000);
+		await sleep(4000); // TODO: could instead retry until successful, with every new retry having an extended wait period
 
 		connection = await knex({
 			client: 'pg',
@@ -23,8 +23,8 @@ async function dbConnection() {
 		await connection.raw('SELECT 1');
 
 		await connection.migrate.latest({
-		tableName: 'knex_migrations',
-		directory: path.join(__dirname, '../migrations'),
+			tableName: 'knex_migrations',
+			directory: path.join(__dirname, '../migrations'),
 		});
 
 		console.log('Database connection initialized');
