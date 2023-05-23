@@ -159,6 +159,23 @@ module.exports = {
 			description: 'Every white-hat hacker needs to know what black-hats are capable of.'
 		}
 	],
+	users: [
+		{
+			id: 1,
+			name: 'Robert',
+			email: 'admin@example.com'
+		},
+		{
+			id: 2,
+			name: 'Elliot Alderson',
+			email: 'mr.robot@evilcorp.com'
+		},
+		{
+			id: 3,
+			name: 'Darlene Alderson',
+			email: 'fsociety@protonmail.com'
+		}
+	],
 	// DB junction table links
 	course_modules: [
 		{
@@ -262,6 +279,148 @@ module.exports = {
 		{
 			course_id: 5,
 			category_id: 3,
+		}
+	],
+	progress: [
+		{
+			id: 1,
+			course_id: 1,
+			module_id: 1,
+			user_id: 2,
+			progress: 30.5
+		},
+		{
+			id: 2,
+			course_id: 1,
+			module_id: 4,
+			user_id: 2,
+			progress: 53.17
+		},
+		{
+			id: 3,
+			course_id: 3,
+			module_id: 10,
+			user_id: 1,
+			progress: 80.75
+		},
+		{
+			id: 4,
+			course_id: 4,
+			module_id: 15,
+			user_id: 3,
+			progress: 12.5
+		},
+		{
+			id: 5,
+			course_id: 2,
+			module_id: 6,
+			user_id: 1,
+			progress: 95.0
+		},
+		{
+			id: 6,
+			course_id: 2,
+			module_id: 8,
+			user_id: 3,
+			progress: 60.33
+		},
+		{
+			id: 7,
+			course_id: 5,
+			module_id: 19,
+			user_id: 2,
+			progress: 20.0
+		},
+		{
+			id: 8,
+			course_id: 1,
+			module_id: 3,
+			user_id: 2,
+			progress: 42.9
+		},
+		{
+			id: 9,
+			course_id: 3,
+			module_id: 12,
+			user_id: 1,
+			progress: 85.5
+		},
+		{
+			id: 10,
+			course_id: 1,
+			module_id: 2,
+			user_id: 3,
+			progress: 75.25
+		},
+		{
+			id: 11,
+			course_id: 4,
+			module_id: 14,
+			user_id: 1,
+			progress: 17.1
+		},
+		{
+			id: 12,
+			course_id: 2,
+			module_id: 7,
+			user_id: 2,
+			progress: 99.99
+		},
+		{
+			id: 13,
+			course_id: 3,
+			module_id: 11,
+			user_id: 1,
+			progress: 5.5
+		},
+		{
+			id: 14,
+			course_id: 5,
+			module_id: 17,
+			user_id: 3,
+			progress: 70.0
+		},
+		{
+			id: 15,
+			course_id: 2,
+			module_id: 5,
+			user_id: 2,
+			progress: 33.8
+		},
+		{
+			id: 16,
+			course_id: 4,
+			module_id: 13,
+			user_id: 3,
+			progress: 62.5
+		},
+		{
+			id: 17,
+			course_id: 3,
+			module_id: 9,
+			user_id: 1,
+			progress: 88.75
+		},
+		{
+			id: 18,
+			course_id: 1,
+			module_id: 2,
+			user_id: 2,
+			progress: 47.2
+		},
+		{
+			id: 19,
+			course_id: 4,
+			module_id: 16,
+			user_id: 2,
+			progress: 25.6
+		},
+		{
+			id: 20,
+			course_id: 5,
+			module_id: 20,
+			user_id: 3,
+			progress: 100.0
 		}
 	]
 }
