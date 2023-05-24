@@ -33,11 +33,37 @@ async function getModulesByCategoryName(categoryName) {
 		console.log(modules);
 		return modules;
 	} catch (error) {
-		console.error('Error retrieving modules:', error);
+		console.error('Error retrieving modules by category name:', error);
+	}
+}
+
+async function getPopularModules() {
+	try {
+		const now = new Date();
+		const oneMonthAgo = new Date();
+		oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
+
+		const db = await dbConnection();
+
+		const topModules = await db('progress')
+			.select('modules.id', 'modules.name')
+			.count('progress.module_id AS progress_count')
+			.join('modules', 'progress.module_id', '=', 'modules.id')
+			.whereBetween('progress.updated_at', [oneMonthAgo, now])
+			.groupBy('modules.id', 'modules.name')
+			.orderBy('progress_count', 'desc')
+			.limit(10)
+			.then((result) => {
+				console.log(result);
+			})
+
+	} catch (error) {
+		console.error('Error retrieving popular modules:', error);
 	}
 }
 
 module.exports = {
 	insertSampleData,
-	getModulesByCategoryName
+	getModulesByCategoryName,
+	getPopularModules
 }

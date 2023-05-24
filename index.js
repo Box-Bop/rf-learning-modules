@@ -15,6 +15,8 @@ async function initialize() {
 	await db.insertSampleData();
 
 	await db.getModulesByCategoryName('Inspecting network traffic.')
+
+	await db.getPopularModules();
 }
 
 initialize();
