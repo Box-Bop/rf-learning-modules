@@ -52,11 +52,9 @@ async function getPopularModules() {
 			.whereBetween('progress.updated_at', [oneMonthAgo, now])
 			.groupBy('modules.id', 'modules.name')
 			.orderBy('progress_count', 'desc')
-			.limit(10)
-			.then((result) => {
-				console.log(result);
-			})
+			.limit(10);
 
+		return topModules;
 	} catch (error) {
 		console.error('Error retrieving popular modules:', error);
 	}
