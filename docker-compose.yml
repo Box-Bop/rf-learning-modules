@@ -18,7 +18,8 @@ services:
       POSTGRES_DB: learning-modules
     ports:
       - 5432:5432
-    # volumes:
-    #   - modules-db:/var/lib/mysql
+    volumes:
+      - db-data:/var/lib/postgresql/data
 volumes:
-  modules-db:
+  app:
+  db-data:
