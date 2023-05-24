@@ -421,6 +421,216 @@ module.exports = {
 			module_id: 20,
 			user_id: 3,
 			progress: 100.0
+		},
+		{
+			id: 21,
+			course_id: 1,
+			module_id: 2,
+			user_id: 1,
+			progress: 40.25
+		},
+		{
+			id: 22,
+			course_id: 2,
+			module_id: 5,
+			user_id: 1,
+			progress: 65.75
+		},
+		{
+			id: 23,
+			course_id: 3,
+			module_id: 10,
+			user_id: 3,
+			progress: 17.5
+		},
+		{
+			id: 24,
+			course_id: 4,
+			module_id: 13,
+			user_id: 1,
+			progress: 82.0
+		},
+		{
+			id: 25,
+			course_id: 5,
+			module_id: 18,
+			user_id: 2,
+			progress: 50.5
+		},
+		{
+			id: 26,
+			course_id: 5,
+			module_id: 20,
+			user_id: 2,
+			progress: 90.1
+		},
+		{
+			id: 27,
+			course_id: 1,
+			module_id: 3,
+			user_id: 1,
+			progress: 30.0
+		},
+		{
+			id: 28,
+			course_id: 2,
+			module_id: 6,
+			user_id: 2,
+			progress: 73.8
+		},
+		{
+			id: 29,
+			course_id: 3,
+			module_id: 11,
+			user_id: 3,
+			progress: 9.99
+		},
+		{
+			id: 30,
+			course_id: 4,
+			module_id: 14,
+			user_id: 3,
+			progress: 67.5
+		},
+		{
+			id: 31,
+			course_id: 5,
+			module_id: 19,
+			user_id: 1,
+			progress: 22.3
+		},
+		{
+			id: 32,
+			course_id: 1,
+			module_id: 1,
+			user_id: 3,
+			progress: 55.0
+		},
+		{
+			id: 33,
+			course_id: 2,
+			module_id: 7,
+			user_id: 1,
+			progress: 35.6
+		},
+		{
+			id: 34,
+			course_id: 3,
+			module_id: 9,
+			user_id: 2,
+			progress: 78.9
+		},
+		{
+			id: 35,
+			course_id: 4,
+			module_id: 15,
+			user_id: 1,
+			progress: 15.0
+		},
+		{
+			id: 36,
+			course_id: 5,
+			module_id: 17,
+			user_id: 1,
+			progress: 92.5
+		},
+		{
+			id: 37,
+			course_id: 2,
+			module_id: 4,
+			user_id: 2,
+			progress: 25.2
+		},
+		{
+			id: 38,
+			course_id: 2,
+			module_id: 7,
+			user_id: 3,
+			progress: 63.0
+		},
+		{
+			id: 39,
+			course_id: 3,
+			module_id: 12,
+			user_id: 3,
+			progress: 47.7
+		},
+		{
+			id: 40,
+			course_id: 4,
+			module_id: 16,
+			user_id: 1,
+			progress: 88.0
+		},
+		{
+			id: 41,
+			course_id: 2,
+			module_id: 4,
+			user_id: 3,
+			progress: 32.1
+		},
+		{
+			id: 42,
+			course_id: 2,
+			module_id: 8,
+			user_id: 1,
+			progress: 70.2
+		},
+		{
+			id: 43,
+			course_id: 4,
+			module_id: 13,
+			user_id: 2,
+			progress: 5.0
+		},
+		{
+			id: 44,
+			course_id: 4,
+			module_id: 16,
+			user_id: 3,
+			progress: 75.8
+		},
+		{
+			id: 45,
+			course_id: 1,
+			module_id: 1,
+			user_id: 1,
+			progress: 20.0
+		},
+		{
+			id: 46,
+			course_id: 2,
+			module_id: 5,
+			user_id: 3,
+			progress: 51.5
+		},
+		{
+			id: 47,
+			course_id: 3,
+			module_id: 10,
+			user_id: 2,
+			progress: 12.0
+		},
+		{
+			id: 48,
+			course_id: 4,
+			module_id: 14,
+			user_id: 2,
+			progress: 80.2
+		},
+		{
+			id: 49,
+			course_id: 5,
+			module_id: 18,
+			user_id: 1,
+			progress: 40.8
+		},
+		{
+			id: 50,
+			course_id: 5,
+			module_id: 20,
+			user_id: 1,
+			progress: 97.5
 		}
 	]
 }
