@@ -7,7 +7,8 @@ let connection = null;
 
 async function dbConnection() {
 	if (!connection) {
-		await sleep(4000); // TODO: could instead retry until successful, with every new retry having an extended wait period
+		// Even with the `depends_on` in the docker-compose file, the app is ready before DB can accept connections
+		await sleep(2000); // TODO: could instead retry until successful, with every new retry having an extended wait period
 
 		connection = await knex({
 			client: 'pg',
