@@ -20,5 +20,4 @@ Some test data is already provided on app launch (see [insertSampleData](https:/
 	returns the top 10 modules used in the last month  
 
 ### Here's the DB structure:
-![image](https://github.com/Box-Bop/rf-learning-modules/assets/33263090/9000cadc-8d95-44ef-aed6-8b5371fda579)
-
+![image](https://github.com/Box-Bop/rf-learning-modules/assets/33263090/094c85f1-c2c5-4a6b-9c12-c51c18bbd5cb)
