@@ -19,5 +19,7 @@ Some test data is already provided on app launch (see [insertSampleData](https:/
 * `/getPopularModules`  
 	returns the top 10 modules used in the last month  
 
+## Run tests by using `npm test`  
+
 ### Here's the DB structure:
 ![image](https://github.com/Box-Bop/rf-learning-modules/assets/33263090/094c85f1-c2c5-4a6b-9c12-c51c18bbd5cb)
