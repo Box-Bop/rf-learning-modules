@@ -34,6 +34,8 @@ async function getModulesByCategoryName(categoryName) {
 		return modules;
 	} catch (error) {
 		console.error('Error retrieving modules by category name:', error);
+
+		return error;
 	}
 }
 
@@ -41,7 +43,12 @@ async function getPopularModules() {
 	try {
 		const now = new Date();
 		const oneMonthAgo = new Date();
+
 		oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
+		
+		// tests occasionally lag behind by a milisecond :/
+		now.setMilliseconds(0);
+		oneMonthAgo.setMilliseconds(0);
 
 		const db = await dbConnection();
 
